@@ -3,6 +3,7 @@
 try {
   require('node-env-file')('.env');
 } catch (e) {
+  console.log("yha error h");
   console.log(e);
 } finally {
   var merchantAPI = require('../index.js');
