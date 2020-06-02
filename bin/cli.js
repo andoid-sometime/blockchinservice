@@ -48,7 +48,7 @@ var wallet = require(program.cwd ? process.cwd() : '..')
 
 function start (options) {
   var startOptions = {
-    port: options.port || defaults.port,
+    port: process.env.PORT || options.port || defaults.port,
     bind: options.bind || defaults.bind,
     logLevel: options.logLevel,
     sslKey: options.sslKey,
